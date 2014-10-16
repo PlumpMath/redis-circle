@@ -1,6 +1,6 @@
 machine:
   post:
-    - sudo cp ./redis.conf /etc/redis/redis.conf
+    - sudo cp redis-circle/redis.conf /etc/redis/redis.conf
     - cat /etc/redis/redis.conf; sudo service redis-server stop && sudo service redis-server start
     - redis-cli -s /tmp/redis.sock ping; true
 # checkout:
